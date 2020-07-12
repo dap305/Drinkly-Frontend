@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { user } from '../models/user'
 import { JwtHelperService } from "@auth0/angular-jwt";
 
 @Injectable({
@@ -35,7 +36,7 @@ export class AuthService {
     // return this.http.post("http://localhost:5000/api/user/authenticate", user, {
     //   headers: headers,
     // });
-    return this.http.post(this._url+'authenticate', user, {
+    return this.http.post<user>(this._url+'authenticate', user, {
       headers: headers,
     })
   }
