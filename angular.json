@@ -138,5 +138,8 @@
       }
     }
   },
-  "defaultProject": "drinkly"
+  "defaultProject": "drinkly",
+  "cli": {
+    "analytics": false
+  }
 }
